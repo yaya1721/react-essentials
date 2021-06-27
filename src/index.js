@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 //import reportWebVitals from './reportWebVitals';
+//using framents to add two adjacent components, wrapped w <div></div>
+   // ReactDOM.render(
+   // <React.Fragment>
+   //   <App />
+   //   <AppTwo />
+   // </React.Fragment>,
+   // document.getElementById("root"));
+//The `React.Fragment` construct allows sibling components to be rendered together without creating any additional html tags.
+
 
 ReactDOM.render(
   // <React.StrictMode> ensure that React code adheres to best practices

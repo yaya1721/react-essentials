@@ -14,6 +14,11 @@ function Main(props){
   return (
     <section>
       <p>This is {props.name} learning React.js</p>
+      <ul style={{textAlign:"left"}}>
+      {props.hobbies.map((hobby) => (
+        <li key={hobby.id}>{hobby.title}</li>
+        ))}
+      </ul>
     </section>
    );
 }
@@ -31,6 +36,8 @@ const hobbies = [
   "Reading"
 ];
 
+const hobbyObjects = hobbies.map((hobby, i) => ({id: i, title: hobby}))
+
 hobbies.map((hobby) => console.log(hobby));
 
 function App() {
@@ -38,7 +45,7 @@ function App() {
     <div className="App">
 
       <Header />
-      <Main name= "Sonya"/>
+      <Main name= "Sonya" hobbies={hobbyObjects}/>
       <Footer year={new Date().getFullYear()}/>
     </div>
 
